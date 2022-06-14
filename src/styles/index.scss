@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  font-family: $Poppins;
+  color: $dark;
+}
+
+.su-btn-add {
+  color: #66c150;
+}
+
+.su-todo-item.is-completed:after {
+  background: #66c150;
+}
+
+#root {
+  height: 100%;
+}
