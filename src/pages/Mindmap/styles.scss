@@ -1,0 +1,18 @@
+.floatingedges {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.floatingedges .react-flow__handle {
+  opacity: 0;
+}
+.buttons-container {
+  position: absolute;
+  padding: 20px;
+  & > button {
+    margin-right: 20px;
+  }
+  z-index: 99;
+}

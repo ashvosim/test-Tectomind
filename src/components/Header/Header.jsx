@@ -20,19 +20,22 @@ const Header = () => {
         height: window.innerHeight,
       });
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    if (size.width > 768 && menuOpen) {
+    if (size.width >= 768 && menuOpen) {
       setMenuOpen(false);
     }
   }, [size.width, menuOpen]);
 
   const menuToggleHandler = () => {
-    setMenuOpen((p) => !p);
+    if (size.width <= 768) {
+      setMenuOpen((p) => !p);
+    }
   };
 
   return (
@@ -43,7 +46,7 @@ const Header = () => {
         </Link>
         <nav
           className={`${classes.header__content__nav} ${
-            menuOpen && size.width < 768 ? classes.isMenu : ""
+            menuOpen ? classes.isMenu : ""
           }`}
         >
           <ul>
