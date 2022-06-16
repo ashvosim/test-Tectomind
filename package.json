@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^4.21.1",
+    "blink-mind-react": "^0.1.8-beta.5",
     "react": "^18.1.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^18.1.0",

@@ -84,6 +84,7 @@ export function createNodesAndEdges(nodesNum) {
       isRoot: true,
       label: (
         <MindMapCard
+          id={"target"}
           title="Task"
           percent={100}
           showInfo={false}
@@ -108,6 +109,7 @@ export function createNodesAndEdges(nodesNum) {
       data: {
         label: (
           <MindMapCard
+            id={i}
             title={`Subtask ${i + 1}`}
             percent={(i + 1) % 2 !== 0 ? 100 : 0}
           />

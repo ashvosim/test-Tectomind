@@ -1,9 +1,20 @@
 import React from "react";
+import { Input } from "antd";
 import { Card, Progress } from "antd";
 
-function MindMapCard({ title, percent, showInfo = true, status = "default" }) {
+function MindMapCard({
+  id,
+  title,
+  percent,
+  showInfo = true,
+  status = "default",
+}) {
   return (
-    <Card title={title} style={{ width: 200 }}>
+    <Card
+      id={id}
+      title={<Input className="card-input" defaultValue={title} />}
+      style={{ width: 200 }}
+    >
       <Progress percent={percent} showInfo={showInfo} status={status} />
     </Card>
   );
